@@ -271,7 +271,7 @@ var webControler= {
     }, 
 }
 webControler.init()
-console.log(parseInt('430000'))
+
 var criteria = document.getElementsByClassName('type-option') 
 for (let i= 0 ; i<criteria.length;i++) {
     console.log(criteria[i].id)
