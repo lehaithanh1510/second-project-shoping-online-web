@@ -197,7 +197,7 @@ var data  = [
 
 var uiControler= {
     // RENDER ITEMS
-    renderBook :function(num){
+    renderBook :function(num, data){
         var html ='<div class ="book" id =%id%><img class ="pic-book" src ="%imgname%"><span class="description-book">%description%</span><br><div class="container-price"><span class="price-book">%price%</span><p class ="currency">%đ/q%</p></div></div>'
         for(var i= 0;i< data.length;i++){
             var newhtml =html. replace('%imgname%',data[i].pic)
@@ -225,26 +225,59 @@ var uiControler= {
         var num = numberControler.cartQuantity.length
         var htmlReplace = "Giỏ hàng("+ num +")"
         document.querySelector('.cart-button').textContent= htmlReplace
-    },
-    // RENDER FILTER ITEM 
-    
+    },    
     
 }
 var numberControler= {
     cartQuantity: [],
+    bookFiltered : [],
     addItem :function(infor){
         this.cartQuantity.push(infor)
     },
+    findBookFiltered : function () {
+        var priceId = [] 
+        var criteria = document.getElementsByClassName('type-option') 
+        for (let i= 0 ; i<criteria.length; i++){ 
+            if (criteria[i].checked) priceId.push(criteria[i].id)
+        }
+        for (let i= 0 ; i<priceId.length; i++) {
+            if(priceId[i]== 'check-1') {
+//                   console.log(data.filter(datas => parseInt(datas.price)<=50000)) 
+                 this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price< 50000)]
+                 console.log(this.bookFiltered)
+            }
+            else if(priceId[i]== 'check-2') {
+                this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price<100000 && datas.price >= 50000 )]
+            }
+
+            else if(priceId[i]== 'check-3') {
+                this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price<200000 && datas.price >= 10000 )]
+            }
+            
+            else if(priceId[i]== 'check-4') {
+                this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price<300000 && datas.price >= 200000 )]
+                }
+            else if(priceId[i]== 'check-5') {
+                this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price<400000 && datas.price >= 300000 )]
+            }
+            else if(priceId[i]== 'check-6') {
+                this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price<500000 && datas.price >= 400000 )]
+            }
+            else if(priceId[i]== 'check-7') {
+                this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price >= 500000 )]
+            }
+        }
+    }
 }
 var webControler= {
     init: function(){  
         var page= 0;
-        uiControler.renderBook(page)
+        uiControler.renderBook(page,data)
         window.onscroll = function() {
             console.log(document.body.scrollHeight)
             if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight- 100) {
                 page++
-                uiControler.renderBook(page)
+                uiControler.renderBook(page,data)
             }
             var bookContainer= document.querySelectorAll('.book')
             for (var i=0; i<bookContainer.length;i++){
@@ -268,49 +301,25 @@ var webControler= {
             numberControler.addItem(data[index])
             uiControler.addingCart()
         }
-        document.querySelector('.submit-option').addEventListener('click',renderItem)
-        function renderItem() {
-            var priceId = []
-            var bookFiltered = []
-            var criteria = document.getElementsByClassName('type-option') 
-            for (let i= 0 ; i<criteria.length; i++){
-                if (criteria[i].checked) priceId.push(criteria[i].id)
-            }
-            for (let i= 0 ; i<priceId.length; i++) {
-                if(priceId[i]== 'check-1') {
-//                    console.log(data.filter(datas => parseInt(datas.price)<=50000)) 
-                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price< 50000)]
-                    console.log(bookFiltered)
-                }
-                else if(priceId[i]== 'check-2') {
-                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price<=100000 && datas.price >= 50000 )]
-                }
-                else if(priceId[i]== 'check-3') {
-                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price<=300000 && datas.price >= 200000 )]
-                }
-                else if(priceId[i]== 'check-4') {
-                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price<=400000 && datas.price >= 300000 )]
-                }
-                else if(newArr[i]== 'check-5') {
-                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price<=500000 && datas.price >= 400000 )]
-                }
-                else if(newArr[i]== 'check-6') {
-                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price >= 500000 )]
-                }
-            }
+        document.querySelector('.submit-option').addEventListener('click',renderFilterItem)
+        function renderFilterItem() {
             var hiddenBook = document.querySelectorAll('.book')
             console.log(hiddenBook)
             for (let i=0 ;i< hiddenBook.length; i++) {
                 hiddenBook[i].hidden = true
             }
-            var html ='<div class ="book" id =%id%><img class ="pic-book" src ="%imgname%"><span class="description-book">%description%</span><br><div class="container-price"><span class="price-book">%price%</span><p class ="currency">%đ/q%</p></div></div>'
-            for(var i= 0;i< bookFiltered.length;i++){
-                var newhtml =html. replace('%imgname%',bookFiltered[i].pic)           
-                newhtml =newhtml.replace('%description%',bookFiltered[i].name)          
-                newhtml =newhtml.replace('%price%',bookFiltered[i].price)
-                newhtml =newhtml.replace('%id%',data[i].id)  
-                newhtml =newhtml.replace('%đ/q%',data[i].currency)
-                document.querySelector('.container-books').insertAdjacentHTML('beforeend',newhtml)
+            numberControler.findBookFiltered()
+            uiControler.renderBook(0,numberControler.bookFiltered)
+            window.onscroll = function() {
+            console.log(document.body.scrollHeight)
+            if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight- 100) {
+                page++
+                uiControler.renderBook(page,numberControler.bookFiltered)
+            }
+            var bookContainer= document.querySelectorAll('.book')
+            for (var i=0; i<bookContainer.length;i++){
+                bookContainer[i].addEventListener('click',itemDetail)
+            }
         }
         }
     }, 
