@@ -235,6 +235,7 @@ var numberControler= {
         this.cartQuantity.push(infor)
     },
     findBookFiltered : function () {
+        this.bookFiltered = []
         var priceId = [] 
         var criteria = document.getElementsByClassName('type-option') 
         for (let i= 0 ; i<criteria.length; i++){ 
@@ -251,7 +252,7 @@ var numberControler= {
             }
 
             else if(priceId[i]== 'check-3') {
-                this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price<200000 && datas.price >= 10000 )]
+                this.bookFiltered = [...this.bookFiltered, ...data.filter(datas => datas.price<200000 && datas.price >= 100000 )]
             }
             
             else if(priceId[i]== 'check-4') {
