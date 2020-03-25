@@ -2,14 +2,14 @@ var data  = [
     {
         name : 'Sự cố ngoài ý muốn',
         pic : 'New-folder/book-0.jpg',
-        price : '25000',
+        price : 25000,
         id :'book-0',
         currency: 'đ'
     },
     {
         name : 'Mập đẹp béo dễ thương',
         pic : 'New-folder/book-1.jpg',
-        price : '43000',
+        price : 43000,
         id :'book-1',
         currency: 'đ'
 
@@ -17,7 +17,7 @@ var data  = [
     {
         name : 'Combo 4 quyyển Ma đạo tổ sư',
         pic : 'New-folder/book-2.jpg',
-        price : '503000',
+        price : 503000,
         id :'book-2',
         currency: 'đ'
 
@@ -25,7 +25,7 @@ var data  = [
     {
         name : 'Truyện ngôn tình Việt Nam',
         pic : 'New-folder/book-3.jpg',
-        price : '34000',
+        price : 34000,
         id :'book-3',
         currency: 'đ'
 
@@ -33,119 +33,119 @@ var data  = [
     {
         name : 'Ngủ cùng sói',
         pic : 'New-folder/book-4.jpg',
-        price : '49000',
+        price : 49000,
         id :'book-4',
         currency: 'đ'
     },
     {
         name : 'Truyện tranh Chết sập bẫy rồi',
         pic : 'New-folder/book-5.jpg',
-        price : '23000',
+        price : 23000,
         id :'book-5',
         currency: 'đ'
     },
     {
         name : 'Sách ứng dụng đá quý phong thủy',
         pic : 'New-folder/book-6.jpg',
-        price : '43000',
+        price : 43000,
         id :'book-6',
         currency: 'đ'
     },
     {
         name : 'Combo 2 tiểu thuyết Trung Quốc',
         pic : 'New-folder/book-7.jpg',
-        price : '230000',
+        price : 230000,
         id :'book-7',
         currency: 'đ'
     },
     {
         name : 'Sách Từ bi thành',
         pic : 'New-folder/book-8.jpg',
-        price : '54000',
+        price : 54000,
         id :'book-8',
         currency: 'đ'
     },
     {
         name : 'Sách Quan hệ nguy hiểm',
         pic : 'New-folder/book-9.jpg',
-        price : '62000',
+        price : 62000,
         id :'book-9',
         currency: 'đ'
     },
     {
         name :'Combo 2 truyện Này chớ làm loạn',
         pic : 'New-folder/book-10.jpg',
-        price : '72.000',
+        price : 72000,
         id :'book-10',
         currency: 'đ'
     },
     {
         name : 'Truyện tranh One Piece',
         pic : 'New-folder/book-11.jpg',
-        price : '14000',
+        price : 14000,
         id :'book-11',
         currency: 'đ/q'
     },
     {
         name : 'Combo 2 sách cuộc sống',
         pic : 'New-folder/book-12.jpg',
-        price : '120000',
+        price : 120000,
         id :'book-12',
         currency: 'đ'
     },
     {
         name : '2 truyện Miền đất hứa',
         pic : 'New-folder/book-13.jpg',
-        price : '69000',
+        price : 69000,
         id :'book-13',
         currency: 'đ'
     },
     {
         name : 'Combo 3 sách kinh tế ',
         pic : 'New-folder/book-14.jpg',
-        price : '268000',
+        price : 268000,
         id :'book-14',
         currency: 'đ'
     },
     {
         name : 'Tiểu thuyết Không gia đình',
         pic : 'New-folder/book-15.jpg',
-        price : '140000',
+        price : 140000,
         id :'book-15',
         currency: 'đ'
     },
     {
         name : 'Combo 2 sách chân lý cuộc sống',
         pic : 'New-folder/book-16.jpg',
-        price : '89000',
+        price : 89000,
         id :'book-16',
         currency: 'đ'
     },
     {
         name : 'Truyện tranh Thầy giáo tuyệt chiêu',
         pic : 'New-folder/book-17.jpg',
-        price : '16000',
+        price : 16000,
         id :'book-17',
         currency: 'đ'
     },
     {
         name : 'Combo 9 sách ngôn tình',
         pic : 'New-folder/book-18.jpg',
-        price : '543000',
+        price : 543000,
         id :'book-18',
         currency: 'đ'
     },
     {
         name : 'Sách đột phá 8+ luyện thi đại học',
         pic : 'New-folder/book-19.jpg',
-        price : '109000',
+        price : 109000,
         id :'book-19',
         currency: 'đ/q'
     },
     {
         name : 'Truyện ngôn tình',
         pic : 'New-folder/book-20.jpg',
-        price : '22000',
+        price : 22000,
         id :'book-20',
         currency: 'đ'
     },
@@ -153,42 +153,42 @@ var data  = [
     {
         name : 'Tam sinh tam thế',
         pic : 'New-folder/book-21.jpg',
-        price : '46000',
+        price : 46000,
         id :'book-21',
         currency: 'đ'
     },
     {
         name : 'Sách Các vấn đề của triết học',
         pic : 'New-folder/book-22.jpg',
-        price : '12000',
+        price : 12000,
         id :'book-22',
         currency: 'đ'
     },
     {
         name : 'Chiến tranh tiền tệ',
         pic : 'New-folder/book-23.jpg',
-        price : '49000',
+        price : 49000,
         id :'book-23',
         currency: 'đ'
     },
     {
         name : 'Hoảng loạn hỗn loạn và cuồng loạn',
         pic : 'New-folder/book-24.jpg',
-        price : '52000',
+        price : 52000,
         id :'book-24',
         currency: 'đ'
     },
     {
         name : 'Truyện tranh Conan',
         pic : 'New-folder/book-25.jpg',
-        price : '25000',
+        price : 25000,
         id :'book-25',
         currency: 'đ'
     },
     {
         name : 'Shark Tank American: tư vấn từ các shark',
         pic : 'New-folder/book-26.jpg',
-        price : '256000',
+        price : 256000,
         id :'book-26',
         currency: 'đ'
     },
@@ -268,16 +268,55 @@ var webControler= {
             numberControler.addItem(data[index])
             uiControler.addingCart()
         }
+        document.querySelector('.submit-option').addEventListener('click',renderItem)
+        function renderItem() {
+            var priceId = []
+            var bookFiltered = []
+            var criteria = document.getElementsByClassName('type-option') 
+            for (let i= 0 ; i<criteria.length; i++){
+                if (criteria[i].checked) priceId.push(criteria[i].id)
+            }
+            for (let i= 0 ; i<priceId.length; i++) {
+                if(priceId[i]== 'check-1') {
+//                    console.log(data.filter(datas => parseInt(datas.price)<=50000)) 
+                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price< 50000)]
+                    console.log(bookFiltered)
+                }
+                else if(priceId[i]== 'check-2') {
+                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price<=100000 && datas.price >= 50000 )]
+                }
+                else if(priceId[i]== 'check-3') {
+                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price<=300000 && datas.price >= 200000 )]
+                }
+                else if(priceId[i]== 'check-4') {
+                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price<=400000 && datas.price >= 300000 )]
+                }
+                else if(newArr[i]== 'check-5') {
+                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price<=500000 && datas.price >= 400000 )]
+                }
+                else if(newArr[i]== 'check-6') {
+                    bookFiltered = [...bookFiltered, ...data.filter(datas => datas.price >= 500000 )]
+                }
+            }
+            var hiddenBook = document.querySelectorAll('.book')
+            console.log(hiddenBook)
+            for (let i=0 ;i< hiddenBook.length; i++) {
+                hiddenBook[i].hidden = true
+            }
+            var html ='<div class ="book" id =%id%><img class ="pic-book" src ="%imgname%"><span class="description-book">%description%</span><br><div class="container-price"><span class="price-book">%price%</span><p class ="currency">%đ/q%</p></div></div>'
+            for(var i= 0;i< bookFiltered.length;i++){
+                var newhtml =html. replace('%imgname%',bookFiltered[i].pic)           
+                newhtml =newhtml.replace('%description%',bookFiltered[i].name)          
+                newhtml =newhtml.replace('%price%',bookFiltered[i].price)
+                newhtml =newhtml.replace('%id%',data[i].id)  
+                newhtml =newhtml.replace('%đ/q%',data[i].currency)
+                document.querySelector('.container-books').insertAdjacentHTML('beforeend',newhtml)
+        }
+        }
     }, 
 }
 webControler.init()
-
-var criteria = document.getElementsByClassName('type-option') 
-for (let i= 0 ; i<criteria.length;i++) {
-    console.log(criteria[i].id)
-    
-}
-            
+       
 
 
 
